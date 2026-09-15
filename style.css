@@ -55,3 +55,20 @@ section h2{
     color: #493724;
     font-size: 30px;
 }
+.cards{
+    display: inline-flex;
+    justify-content: center;
+    gap: 20px;
+}
+.card{
+    background-color: #eadfc9;
+    width: 250px;
+    padding: 30px;
+    border-radius: 10px;
+}
+.card h3{
+    color: #8b648b;
+}
+.card p{
+    color: #666;
+}
