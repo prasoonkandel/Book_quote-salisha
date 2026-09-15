@@ -26,10 +26,14 @@ nav a{
     text-align: center;
     background-color: #493724;
 }
-.menu a {
-    text-decoration: double;
-    color: darkblue;
-    margin: 25px;
+.logo h1{
+    font-size: 18px;
+    color:#eadfc9;
+}
+.logo p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom:30px;
 }
 .menu a:hover{
     color:cyan
