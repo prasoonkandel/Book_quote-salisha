@@ -7,3 +7,12 @@ button{
 body{
     background-color: aqua;
 }
+footer{
+    background-color: azure;
+    color: beige;
+    padding: 20px 0;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: wavy;
+    
+}
