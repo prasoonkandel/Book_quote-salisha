@@ -19,3 +19,14 @@ nav{
     font-weight:lighter;
     color: chocolate;
 }
+.menu a {
+    text-decoration: double;
+    color: darkblue;
+    margin: 25px;
+}
+.menu a:hover{
+    color:cyan
+}
+.hero{
+    
+}
