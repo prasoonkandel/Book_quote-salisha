@@ -14,3 +14,8 @@ nav{
     font-display: auto;
     align-items: center;
 }
+.logo{
+    font-size: 24px;
+    font-weight:lighter;
+    color: chocolate;
+}
