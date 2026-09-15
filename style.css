@@ -41,9 +41,13 @@ input{
     border: none;
     font-size: 16px;
 }
-.hero{
+button{
     background-color: darkgrey;
-    padding: auto;
+    padding:15px 25px;
+    border: none;
+    cursor: all-scroll;
+}
+section{
+    padding: 60px 10%;
     text-align: center;
-
 }
