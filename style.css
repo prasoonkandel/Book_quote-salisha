@@ -22,8 +22,9 @@ nav a{
     text-decoration: solid;
     margin-left: 20px;
 }
-.logo{
-     
+.logo{ 
+    text-align: center;
+    background-color: #493724;
 }
 .menu a {
     text-decoration: double;
