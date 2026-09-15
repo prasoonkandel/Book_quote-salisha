@@ -4,20 +4,26 @@
     box-sizing: border-box;
 }
 body{
+    margin: 0;
     font-family: fantasy;
     background-color: antiquewhite;
     color: brown;
 }
-nav{
-    background-color: blue;
-    padding: 20px 8%;
-    font-display: auto;
-    align-items: center;
+ header{
+    background-color: hotpink;
+    padding: 20px;
+    display: flex;
+ }
+ header2{
+    color: #8b648b;
+ }
+nav a{
+    color: #333;
+    text-decoration: solid;
+    margin-left: 20px;
 }
 .logo{
-    font-size: 24px;
-    font-weight:lighter;
-    color: chocolate;
+     
 }
 .menu a {
     text-decoration: double;
@@ -28,5 +34,8 @@ nav{
     color:cyan
 }
 .hero{
-    
+    background-color: darkgrey;
+    padding: auto;
+    text-align: center;
+
 }
