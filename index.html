@@ -1,12 +1,124 @@
 <!DOCTYPE html>
 <meta lang="en">
 <head>
-    <meta  charset="UTF-8">
-    <title> Book Quote Finder </title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title> Book quote finder</title>
+    <style>
+        body{
+            margin: 0;
+            background-color:antiquewhite;
+            color: aliceblue;
+            font-family:'Times New Roman', Times, serif ;
+        }
+        header{
+            padding: 20px 50px;
+            border-bottom: 10x dotted#555;
+            display: flex;
+            justify-content: space-between;
+        }
+        header h2{
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        nav a{
+            color: aquamarine;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+        .hero{
+            text-align: center;
+            padding: 70px 20px 50px;
+        }
+        .hero p{
+            color: blueviolet;
+        }
+        .search{
+            margin: auto;
+            display: flex;
+            width: 600px;
+        }
+        .search input{
+            flex: 1;
+            padding: 14px;
+            background-color: #777;
+            color: bisque;
+            border: 1px dashed brown;
+        }
+        .search button{
+            padding: 14px 25px;
+            background: papayawhip;
+            border: none;
+            cursor: pointer;
+        }
+        .quotes{
+            width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .quote {
+            border: 1px dashed burlywood;
+            padding: 25px;
+            margin-bottom: 20px;
+            background-color: powderblue;
+        }
+        .quote p{
+             font-family:Georgia, 'Times New Roman', Times, serif ;
+             font-size: 20px;
+             line-height: 1.6;
+             color: #444;
+        }
+        .author{
+             color: #8b6245;
+             font-size: 14px;
+        }
+        footer{
+            text-align: center;
+            border-top: 1px solid#ddd;
+            padding: 20px;
+            color: #888;
+            margin-top: 40px;
+            background: #fff;
+        }
+    </style>
 </head>
 <body>
-<h1>Check  your slack (message by prasoon)</h1>
-
+    <header>
+<h1>BOOK QUOTES</h1>
+<nav>
+    <a href="#">HOME</a>
+    <a href="#"> BOOKS</a>
+    <a href="#"> ABOUT</a>
+</nav>
+</header>
+<section class="hero">
+    <h1> BOOK QUOTE FINDER</h1>
+    <p> search thousand of quotes from books and authors. </p>
+    <div class="search">
+        <input type="text" placeholder="Books are a uniquely portable magic." >
+        <button> SEARCH YOUR ITEMS </button>
+    </div>
+</section>
+<section class="quotes">
+    <div class ="quote">
+        <p>" A room without books is like a body without soul". </p>
+        <div class="author">
+            -MARCUS TULLIUS CICERO
+        </div>
+    </div>
+    <div class="quote">
+        <p> " There is no friend as loyal as a book"</p>
+        <div class="author">
+            -ERNEST HEMINGWAY
+        </div>
+    </div>
+    <div class="quote">
+      <p>"Books are a uniquely portable magic."</p>
+      <div class="author"> 
+        -STEPHEN KING
+      </div>
+    </div>
+</section>
+<footer>
+    Hope his website gives you a positive vibes
+</footer>
 </body>
 </html>
