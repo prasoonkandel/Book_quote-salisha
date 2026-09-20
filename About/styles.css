@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f6f0e7;
+    color: #352c27;
+    font-family: montserrac;
+    line-height: 1.7;
+}
+.abouthero{
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+.smalltitle,.quotelabel{
+    color: #9a7560;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+.abouthero{
+    max-width: 850px;
+    margin: 25px 0;
+    font-family: "DM serif display",serif;
+    font-weight: 400;
+    line-height: 400px;
+    color: #332a25;
+}
+.abouthero h1 span{
+    display: block;
+    color: #9a7560;
+}
+.line{
+    width: 70px;
+    height: 1px;
+    background: #a88a78;
+    margin:20px 0 25px;
+}
+.intro{
+    max-width: ;
+}
