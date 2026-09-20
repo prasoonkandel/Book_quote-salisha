@@ -46,5 +46,7 @@ body{
     margin:20px 0 25px;
 }
 .intro{
-    max-width: ;
+    max-width: 560px;
+    color: #71645c;
+    font-size: 15px;
 }
