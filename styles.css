@@ -90,13 +90,13 @@ nav a:hover {
     flex-direction: column;
     justify-content: space-between;
 }
-.quote:nth-child(1) {
+.quote-dummy:nth-child(1) {
     background-color: #c9c8ff;
 }
-.quote:nth-child(2) {
+.quote-dummy:nth-child(2) {
     background-color: #aee4f5;
 }
-.quote:nth-child(3) {
+.quote-dummy:nth-child(3) {
     background-color: #aee4f5;
 }
 .quote p {
@@ -106,7 +106,7 @@ nav a:hover {
     font-style: italic;
     color: #102a43;
 }
-.author {
+.author-dummy {
     font-size: 14px;
     font-size: bold;
     letter-spacing: 1px;
@@ -120,4 +120,30 @@ footer {
     background-color: #12345b;
     color: white;
     font-size: 16px;
+}
+.quote-output {
+    flex: 1;
+    min-height: 100px;
+    padding: 35px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #c9c8ff;
+    margin-top: 25px;
+}
+
+.quote-output .quote {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 36px;
+    line-height: 1.6;
+    font-style: italic;
+    color: #102a43;
+}
+.quote-output .author {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #102a43;
+    text-align: right;
 }
