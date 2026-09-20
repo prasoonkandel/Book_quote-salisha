@@ -16,15 +16,16 @@
 <section class="hero">
     <h1> BOOK QUOTE FINDER</h1>
     <p> search thousand of quotes from books and authors. </p>
-    <div class="search">
+    <form class="search">
         <input type="text" placeholder="Books are a uniquely portable magic." >
-        <button> SEARCH QUOTES </button>
-    </div>
+        <button type="submit"> SEARCH QUOTES </button>
+    </form>
     <div class="quote-output">
-        <p class="quote"></p>
-        <p class="author"></p>
         <div class="loading"></div>
-        <button class="new-quote"> NEW QUOTE </button>
+        <div class="quote-result"></div>
+        <div class="error"></div>
+
+        <button class="new-quote" type="button">NEW QUOTE</button>
     </div>
 </section>
 <h2 class="quote-title">Some Inspiring Quotes</h2>

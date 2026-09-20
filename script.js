@@ -1,51 +1,85 @@
-API_URL = "https://book-quote-api.vercel.app/get-quotes";
+const API_URL = "https://bookquote-api.vercel.app/get-quotes";
 
-quote_output = document.querySelector(".quote-output");
-quote = quote_output.querySelector(".quote");
-author = quote_output.querySelector(".author");
-newQuote = quote_output.querySelector(".new-quote");
-loading = quote_output.querySelector(".loading");
-search = document.querySelector(".search");
-quote_output.style.display = "none";
+const search = document.querySelector(".search");
+const input = search.querySelector("input");
+const newQuoteButton = document.querySelector(".new-quote");
+const quoteOutput = document.querySelector(".quote-output");
+const loading = quoteOutput.querySelector(".loading");
+const errorOutput = quoteOutput.querySelector(".error");
+const quoteResult = quoteOutput.querySelector(".quote-result");
 
-function hideOutput() {
-  quote_output.style.display = "none";
-  search.style.display = "block";
-  quote.textContent = "";
-  author.textContent = "";
-  loading.innerHTML = "";
-}
+quoteOutput.style.display = "none";
 
 function showOutput() {
+  newQuoteButton.style.display = "flex";
+  quoteOutput.style.display = "flex";
   search.style.display = "none";
-  quote_output.style.display = "block";
   loading.innerHTML = "";
 }
-
+function hideOutput() {
+  quoteResult.innerHTML = "";
+  errorOutput.innerHTML = "";
+  search.style.display = "flex";
+  loading.innerHTML = "";
+  quoteOutput.style.display = "none";
+}
 function showLoading() {
-  quote_output.style.display = "block";
-  loading.innerHTML = "<p>Loading...</p>";
+  quoteOutput.style.display = "flex";
+  newQuoteButton.style.display = "none";
   search.style.display = "none";
+  loading.innerHTML = "<p>Loading...</p>";
 }
 
-async function getQuotes() {
-  const response = await fetch(API_URL);
-  try {
-    const data = await response.json();
-    quote.textContent = data.quote;
-    author.textContent = data.author;
-    showOutput();
-  } catch (error) {
-    hideOutput();
-    alert("Failed to fetch quotes. Please try again later.");
+async function getQuote() {
+  const query = input.value.trim();
+
+  if (!query) {
+    quoteOutput.style.display = "flex";
+    errorOutput.textContent = "Please enter a search query.";
+    return;
   }
+
+  showLoading();
+
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: query,
+        count: 1,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Server returned ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    console.log("API response:", data);
+
+    const quote = data[0].quotes[0].quote;
+    const author = data[0].quotes[0].author;
+    quoteResult.innerHTML = `
+                <p class="quote">"${quote}"</p>
+                <p class="author">— ${author || "Unknown"}</p>
+        `;
+  } catch (error) {
+    console.error(error);
+
+    errorOutput.textContent = `Failed to fetch quotes: ${error.message}`;
+  }
+  showOutput();
 }
 
 search.addEventListener("submit", (e) => {
   e.preventDefault();
-  getQuotes();
+  getQuote();
 });
 
-newQuote.addEventListener("click", () => {
-  getQuotes();
+newQuoteButton.addEventListener("click", () => {
+  hideOutput();
 });
