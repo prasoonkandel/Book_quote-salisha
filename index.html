@@ -16,27 +16,35 @@
 <section class="hero">
     <h1> BOOK QUOTE FINDER</h1>
     <p> search thousand of quotes from books and authors. </p>
-    <div class="search">
+    <form class="search">
         <input type="text" placeholder="Books are a uniquely portable magic." >
-        <button> SEARCH YOUR ITEMS </button>
+        <button type="submit"> SEARCH QUOTES </button>
+    </form>
+    <div class="quote-output">
+        <div class="loading"></div>
+        <div class="quote-result"></div>
+        <div class="error"></div>
+
+        <button class="new-quote" type="button">NEW QUOTE</button>
     </div>
 </section>
+<h2 class="quote-title">Some Inspiring Quotes</h2>
 <section class="quotes">
-    <div class ="quote">
+    <div class ="quote-dummy">
         <p>" A room without books is like a body without soul". </p>
-        <div class="author">
+        <div class="author-dummy">
             -MARCUS TULLIUS CICERO
         </div>
     </div>
-    <div class="quote">
+    <div class="quote-dummy">
         <p> " There is no friend as loyal as a book"</p>
-        <div class="author">
+        <div class="author-dummy">
             -ERNEST HEMINGWAY
         </div>
     </div>
-    <div class="quote">
+    <div class="quote-dummy">
       <p>"Books are a uniquely portable magic."</p>
-      <div class="author"> 
+      <div class="author-dummy">
         -STEPHEN KING
       </div>
     </div>
@@ -44,5 +52,6 @@
 <footer>
     Hope his website gives you a positive vibes
 </footer>
+<script src="./script.js"></script>
 </body>
 </html>
