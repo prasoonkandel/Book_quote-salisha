@@ -50,3 +50,53 @@ body{
     color: #71645c;
     font-size: 15px;
 }
+.story,.feature.why{
+    max-width: 1150px;
+    margin: auto;
+    padding: 110px 40px;
+
+}
+.sectionheading{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 55px;
+}
+.sectionheading span{
+    color: #a48673;
+    font-size: 12px;
+    font-weight: 400;
+    color: #3a2f29;
+}
+.centered{
+    justify-content: center;
+}
+.story{
+     border-top: 1px solid #d8ccc0;
+}
+.storycontent{
+    max-width: 760px;
+    margin-left: auto;
+    display: grid;
+    gap:25px ;
+}
+.storycontent p{
+    color: #6c6058;
+    font-size: 16px;
+}
+.features{
+    max-width: 1250px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+.card{
+    min-height: 300px;
+    padding: 40px 35px;
+    border: 1px solid #d8ccc0;
+    transform: 
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
