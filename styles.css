@@ -78,9 +78,10 @@ nav a:hover {
     display: flex;
     justify-content: center;
     gap: 35px;
-    padding: 55px 45px;
+    padding: 35px 45px 55px 45px;
     background-color: #fffaf4;
 }
+
 .quote-dummy {
     flex: 1;
     min-height: 280px;
@@ -146,4 +147,12 @@ footer {
     letter-spacing: 1px;
     color: #102a43;
     text-align: right;
+}
+
+h2.quote-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #102a43;
+    text-align: center;
+    margin-top: 35px;
 }
