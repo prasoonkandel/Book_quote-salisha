@@ -100,3 +100,28 @@ body{
               transform 0.3s ease,
               box-shadow 0.3s ease;
 }
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(75,56,45,0.08);
+}
+.card.featured{
+    background: #e9ddd1;
+    border-color: #cbb7a7;
+}
+.cardnumber{
+    color:#9a7560;
+   font-size: 12px;
+   letter-spacing: 2px;
+   margin-bottom: 55px;
+}
+.card h3{
+    font-family: "DM serif Display",serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.card p{
+    color: #70645c;
+    font-size: 14px;
+}
+
