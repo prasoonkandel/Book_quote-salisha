@@ -156,3 +156,12 @@ h2.quote-title {
     text-align: center;
     margin-top: 35px;
 }
+
+.quote-output button {
+    background-color: #12345b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
