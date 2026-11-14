@@ -1,47 +1,57 @@
-# Book Quote Finder (Frontend)
 
-<p>
-  <a href="https://book-quote-finder.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/Open_website-1E3A8A?style=for-the-badge&logo=vercel&logoColor=white" />
-  </a>
-</p>
+# Book Quote Finder (Frontend)
 
 This is the frontend for [Book Quote Finder](https://github.com/prasoonkandel/Book_quote).
 
-It's designed for writers, researchers, and anyone looking for a special quote they remember partially. This application uses **semantic search** to find the most relevant quotes from a large book quote database.
+It's designed for writers, researchers, and anyone looking for a special quote they only remember partially. You can search with a few words, a mood, or an idea. The backend uses semantic search to find related book quotes.
 
+**[Open the website](https://book-quote-finder.vercel.app)**
 
-## Features: 
-- Uses semantic search to find the most relevant book quotes
-- Find a book quote from our book quotes database
-- Get a book quote according to your mood
-- Find relavent book quotes to include in your writing
-- Find a book quote similar to you query
-- Beautiful and Modern Web UI/UX
+## Try it
+
+1. Open the website.
+2. Type what you remember about a quote, or describe the kind of quote you want.
+3. Click **Search Quotes** to see a matching quote and its author.
+4. Click **New Quote** to search again.
+
+## Features
+
+- Search for quotes without remembering the exact wording.
+- Find quotes related to a mood, topic, or idea.
+- See the quote and its attributed author.
+- Search again without refreshing the page.
+- Loading and error messages while fetching quotes.
 
 ## Tech Stack
 
-<p>
-  <img src="https://skillicons.dev/icons?i=html,css,js,git,github,vercel" />
-</p>
+HTML, CSS, and vanilla JavaScript. The website is deployed on Vercel.
 
-## Backend
+## Run locally
 
-This repository contains the frontend only.
+No npm install or build step is needed.
 
-The backend handles the API, database, semantic search, embeddings, and quotes retrieval.
+```bash
+git clone https://github.com/salishaaaa/Book_quote.git
+cd Book_quote
+python -m http.server 8000
+```
 
-**Backend Repository:**
+Open [http://localhost:8000](http://localhost:8000).
 
-[prasoonkandel/Book_quote](https://github.com/prasoonkandel/Book_quote)
+The frontend currently sends requests to the deployed backend at `https://bookquote-api.vercel.app/get-quotes`. To use your own backend, change `API_URL` in `script.js`.
 
-## Project Architecture
+## How it works
 
-![Architecture](https://github.com/prasoonkandel/Book_quote/blob/main/architecture.jpg)
+The search form sends a `POST` request with the search text and `count: 1`. The backend finds a related quote and sends back its text and author. JavaScript then shows the result on the page.
+
+The frontend doesn't handle embeddings, databases, or quote retrieval. Those are part of the backend.
+
+![Book Quote Finder architecture](https://raw.githubusercontent.com/prasoonkandel/Book_quote/main/architecture.jpg)
 
 ## Related Repository
 
-| Repository | Description |
-| --- | --- |
-| **This repository** | Book Quote Finder frontend |
-| [Book Quote Finder Backend](https://github.com/prasoonkandel/Book_quote) | API, database, semantic search, and backend services |
+[Book Quote Finder Backend](https://github.com/prasoonkandel/Book_quote) — FastAPI, database, embeddings, and semantic search.
+
+## Credits
+
+Frontend by [salishaaaa](https://github.com/salishaaaa). Backend by [prasoonkandel](https://github.com/prasoonkandel).
